@@ -1,6 +1,7 @@
 #include <SDL2/SDL.h>
 #include "game.h"
 #include "render.h"
+#include "init.h"
 
 
 int main(int argc, char* argv[]) {
