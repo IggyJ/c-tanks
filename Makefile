@@ -1,12 +1,12 @@
 SRC = src/*.c
 OUT = tanks
 CC  = gcc
-CFLAGS = -w -lm -lSDL2 -lSDL2_image
+CFLAGS = `sdl2-config --libs --cflags` -lSDL2 -lSDL2_image -lm -Wall
 
 
 build: $(SRC)
 	mkdir -p build
-	gcc $(CFLAGS) -o build/$(OUT) $(SRC)
+	$(CC) $(SRC) -o build/$(OUT) $(CFLAGS)
 	cp res/* build
 
 
